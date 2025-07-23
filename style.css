@@ -1,0 +1,311 @@
+/* scroll suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===== NAVBAR STICKY ===== */
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: #0077cc;
+  padding: 15px 25px;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contenedor-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.circulo {
+  background-color: #fff;
+  color: #0077cc;
+  border-radius: 50%;
+  padding: 8px 12px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.nombre {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.menu a {
+  color: #fff;
+  margin-left: 15px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: #ffaa4c;
+}
+
+.btn-contacto {
+  border: 2px solid #fff;
+  border-radius: 20px;
+  padding: 1px 10px;
+  margin-left: 10px;
+}
+
+/* ===== HERO SECTION ===== */
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  background-color: #0077cc;
+  padding: 60px 20px;
+  color: #fff;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.hero-contenido {
+  flex: 1 1 400px;
+  max-width: 600px;
+}
+
+.hero h1 {
+  font-size: 2.3rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+
+/* BOTONES DE PAQUETES */
+.botones-paquetes a {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* Botón naranja (Básico) */
+.btn-destacado {
+  background-color: #ffaa4c;
+  color: #fff;
+}
+.btn-destacado:hover {
+  background-color: #e38c2f;
+}
+
+/* Botones invertidos (Estándar y Avanzado) */
+.btn-invertido {
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+}
+.btn-invertido:hover {
+  background-color: #fff;
+  color: #0077cc;
+}
+
+.hero-imagen img {
+  max-width: 400px;
+  width: 100%;
+}
+
+/* ANIMACIÓN DE LA FRASE */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.frase-animada {
+  animation: slideInLeft 1.2s ease-out;
+}
+
+/* ===== SECCIONES GENERALES ===== */
+
+.seccion {
+  background-color: #fff;
+  color: #333;
+  padding: 40px 20px;
+  border-radius: 10px;
+  max-width: 1000px;
+  margin: 40px auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.seccion h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #0077cc;
+  border-left: 5px solid #ffaa4c;
+  padding-left: 10px;
+}
+
+.seccion p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* ===== ESTILOS PARA LA SECCIÓN DE SERVICIOS ===== */
+
+/* Estilo de listas en la sección de servicios */
+.lista-servicios {
+  list-style: none; /* Quitamos las viñetas por defecto */
+  padding-left: 0;
+  margin-bottom: 25px;
+}
+
+.lista-servicios li {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  padding-left: 25px;
+  position: relative;
+}
+
+/* Opcional: podemos agregar un ícono más adelante con pseudo-elementos */
+/* Diferenciar visualmente servicios futuros */
+.lista-servicios.futuros li {
+  opacity: 0.85;
+  font-style: italic;
+}
+
+/* ===== TABLA DE PRECIOS ===== */
+
+.tabla-precios {
+  width: 100%;
+  border-collapse: collapse; /* Une los bordes */
+  margin-top: 20px;
+  font-size: 1rem;
+}
+
+/* Estilo para encabezados */
+.tabla-precios thead th {
+  background-color: #0077cc;
+  color: #fff;
+  padding: 12px;
+  text-align: left;
+}
+
+/* Estilo para celdas del cuerpo */
+.tabla-precios td {
+  padding: 12px;
+  border: 1px solid #ccc; /* Línea que separa celdas */
+}
+
+/* Estilo para la nota debajo de la tabla */
+.nota-precio {
+  font-size: 0.95rem;
+  color: #666;
+  margin-top: 15px;
+}
+
+/* Frase final que transmite valor */
+.frase-valor {
+  margin-top: 25px;
+  font-style: italic;
+  border-left: 4px solid #ffaa4c;
+  padding-left: 15px;
+  color: #444;
+}
+
+/* ===== PORTAFOLIO ===== */
+
+.proyecto {
+  background-color: #f4f4f4;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.proyecto h3 {
+  margin-bottom: 8px;
+  color: #0077cc;
+}
+
+.proyecto a {
+  text-decoration: none;
+  color: #ffaa4c;
+  font-weight: bold;
+}
+
+.proyecto a:hover {
+  text-decoration: underline;
+}
+
+/* ===== CONTACTO ===== */
+
+.contactos {
+  margin: 20px 0;
+}
+
+.contactos a {
+  display: inline-block;
+  margin-right: 15px;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  background-color: #0077cc;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.contactos a:hover {
+  background-color: #005fa3;
+}
+
+.redes-sociales a {
+  color: #0077cc;
+  font-weight: bold;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.redes-sociales a:hover {
+  text-decoration: underline;
+}
+
+/* ===== FOOTER ===== */
+
+.footer {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #666;
+  margin-top: 50px;
+  padding: 30px 20px;
+  border-top: 1px solid #ccc;
+  background-color: #f9f9f9;
+}
+
+.frase-footer {
+  margin-top: 10px;
+  font-style: italic;
+  color: #444;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
